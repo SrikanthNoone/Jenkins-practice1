@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ls -ltr'
-                sh 'pwd'
+               echo 'hello github webhook'
             }
         }
         stage('Test') {
@@ -17,7 +16,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                error "failed"
             }
         }
     }

@@ -1,5 +1,10 @@
 pipeline {
     agent { node { label 'Node1' } }
+
+    environment{
+        USER = 'sri'
+        PASS = '123'
+    }
     
     stages {
         stage('Build') {
@@ -12,6 +17,9 @@ pipeline {
         stage('example'){
             steps{
                 echo 'helllllllllpoooooooooo'
+                echo '${USER}'
+                echo '${PASS}'
+                sh 'printenv'
             }
 
         }

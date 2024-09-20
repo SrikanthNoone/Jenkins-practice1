@@ -14,9 +14,8 @@ pipeline {
             }
         }
         stage(creds){
-            steps{
-                echo '${USER}'
-                echo '${pass}'
+            environment{
+                AUTH = credentials('ssh-auth')
 
             }
         }

@@ -3,6 +3,7 @@ pipeline {
     environment{
 
         USER = 'srikanth'
+        pass = '123'
     }
 
     stages {
@@ -10,7 +11,13 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'pwd'
-                sh 'printenv'
+            }
+        }
+        stage(creds){
+            steps{
+                echo '$USER'
+                echo '$pass'
+
             }
         }
         stage('Test') {

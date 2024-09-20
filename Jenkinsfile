@@ -13,14 +13,7 @@ pipeline {
                 sh 'pwd'
             }
         }
-        stage('creds'){
-            environment{
-                AUTH = credentials('ssh-auth')
-            }
-            steps{
-                sh 'printenv'
-            }
-        }
+        
         stage('Test') {
             steps {
                 echo 'Testing..'

@@ -15,8 +15,8 @@ pipeline {
         }
         stage(creds){
             steps{
-                echo '$USER'
-                echo '$pass'
+                echo '${USER}'
+                echo '${pass}'
 
             }
         }

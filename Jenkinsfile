@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-               echo 'hello github webhook'
             }
         }
         stage('Test') {
@@ -19,14 +18,5 @@ pipeline {
             }
         }
     }
-      post {
-        always {
-            echo 'I will always say Hello again!'
-        }
-        success{
-            echo "I will run on success"
-        }
-        failure{
-            echo "I will run on failure"
-        }
-    }
+}
+      

@@ -13,7 +13,7 @@ pipeline {
                 sh 'pwd'
             }
         }
-        stage(creds){
+        stage('creds'){
             environment{
                 AUTH = credentials('ssh-auth')
             }

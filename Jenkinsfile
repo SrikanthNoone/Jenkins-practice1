@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-               echo 'hello github webhook'
+                sh 'pwd'
             }
         }
         stage('Test') {
@@ -16,6 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            
             }
         }
     }

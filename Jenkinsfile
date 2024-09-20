@@ -18,5 +18,11 @@ pipeline {
             }
         }
     }
-}
-      
+    post{
+        always{
+            echo "i will always run"
+           }
+      failure{
+          echo "i will run on failure"
+           }
+         }

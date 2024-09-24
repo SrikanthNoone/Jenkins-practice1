@@ -67,6 +67,7 @@ pipeline {
                             sh 'sleep 10'
                             echo "parallel running"
                         }
+                }
                 stage ('testing parallel222222222'){
                         steps{
                             sh 'sleep 10'
@@ -76,6 +77,5 @@ pipeline {
             }
         }
         }
-    }
 }
 

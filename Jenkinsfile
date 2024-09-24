@@ -5,8 +5,6 @@ pipeline {
         USER = 'sri'
         PASS = '123'
     }
-
-    parallel
      parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 

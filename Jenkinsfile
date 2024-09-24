@@ -5,6 +5,8 @@ pipeline {
         USER = 'sri'
         PASS = '123'
     }
+
+    parallel
      parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -60,5 +62,30 @@ pipeline {
             
             }
         }
+        stage("parallel"){
+            parallel{
+                stage ('testing parallel1111111111'){
+                        steps{
+                            sh 'sleep 10'
+                            echo "parallel running"
+                        }
+                stage ('testing parallel222222222'){
+                        steps{
+                            sh 'sleep 10'
+                            echo "parallel running"
+                        }
+
+
+
+
+                }
+            }
+
+
+
+        }
+
+
+ 
     }
 }

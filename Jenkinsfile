@@ -74,18 +74,10 @@ pipeline {
                             sh 'sleep 10'
                             echo "parallel running"
                         }
-
-
-
-
                 }
             }
-
-
-
         }
-
-
- 
+        }
     }
 }
+
